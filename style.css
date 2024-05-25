@@ -1,0 +1,575 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 正式 */
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* header */
+.header{
+    max-width: 1296px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    background-color: #FFFFFF;
+    border: 1px #f1f1f1;
+}
+
+.header-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 480px;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.header-bar-item{
+    font-family: 'Noto Sans', sans-serif;
+    height: 32px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    padding: 4px 8px 4px 8px;
+    gap: 10px;
+}
+.stack{
+    display: none;
+}
+
+@media(max-width: 767px){
+    .header{
+        max-width: 375px;
+        padding: 8px 12px;
+    }
+    .header-bar{
+        display: none;
+    }
+    .stack{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .stack span {
+        height: 3px;
+        width: 25px;
+        background: black;
+        margin: 4px;
+        border-radius: 5px;
+    }
+}
+
+/* title */
+.title{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+    padding: 80px 0;
+    gap: 24px;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items:flex-start;
+}
+
+.left-quote{
+    align-self: start;
+}
+.title-first{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-self: center;
+    gap: 16px;
+    text-align: center;
+}
+.title-content1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 400;
+    color: #000;
+    z-index: 1;
+}
+.title-content2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 400;
+    color: #000;
+    z-index: 1;
+}
+.title-content1 .title-mark{
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    z-index: -1;
+}
+.title-content2 .title-mark{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.right-quote{
+    align-self: flex-end;
+}
+
+
+.detail{
+    margin: 0 auto;
+}
+.exp{
+    max-width: 636px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.de-exp {
+    flex: 1;
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #5B5B5B;
+    margin: 0 auto;
+    gap: 8px;
+}
+.exp-title{
+    margin-bottom: 12px;
+    gap: 4px;
+}
+.exp-title:after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #C1C1C1; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px;
+}
+
+@media(max-width: 767px){
+    .title{
+        padding:40px 24px 80px 24px;
+        gap: 40px;
+    }
+    .banner{
+        max-width: 300px;
+        align-items: center;
+    }
+    .left-quote{
+        align-self: center;
+    }
+    .right-quote{
+        display: none;
+    }
+    .title-first{
+        gap: 8px;
+    }
+    .title-content1{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #1E1E1E;
+        z-index: 1;
+    }
+    .title-content2{
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #1E1E1E;
+        z-index: 1;
+    }
+    .title-content1 .title-mark{
+        position: absolute;
+        right: 55px;
+        bottom: 0;
+        z-index: -1;
+    }
+    .title-content2 .title-mark{
+        position: absolute;
+        right: 73px;
+        bottom: 0;
+        z-index: -1;
+    }
+    .exp{
+        max-width: 235px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .de-exp {
+        flex: 1;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        text-align: center;
+        color: #5B5B5B;
+    }
+    .exp-title{
+        margin-bottom: 12px;
+        position: relative;
+        display: inline-block;
+    }
+    .exp-title:after {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #C1C1C1; 
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 2px;
+    }
+    
+}
+
+/* content */
+.wrap{
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+.work-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 80px;
+}
+
+.work img{
+    border-radius: 8px;
+}
+
+.intro{
+    padding: 0px 16px 0px 16px;
+}
+  
+.describe{
+    margin-bottom: 24px;
+}
+  
+.describe h2{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 28px;
+    line-height: 33.6px;
+    color: #3B3B3B;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.describe p{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #919191;
+    font-weight: 400;
+}
+  
+.tags{
+    display: flex;
+    gap: 16px;
+}
+
+.tags li{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3B3B3B;
+    font-weight: 400;
+    padding:4px 12px 4px 12px;
+    background: #F1F1F1;
+    text-align: center;
+    border-radius:16px;
+}
+
+/* 頁碼 */
+.numbers{
+    max-width: 152px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 10px;
+}
+.numbers li{
+    max-width: 40px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    background: #FFFFFF;
+}
+.numbers li a{
+    color: #3B3B3B;
+    text-decoration: none;
+    display: block;
+    padding: 2px 13px;
+    border-radius: 4px;
+}
+.numbers li a:hover{
+    background: black;
+    color: #fff;
+}
+
+@media(max-width: 1289px){
+    .work-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 767px){
+    .wrap{
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 80px 12px;
+    }
+    .work-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 351px;
+    }
+    .work{
+        max-width: 351px;
+        margin-bottom: 48px;
+    }
+    .describe{
+        margin-bottom: 16px;
+    }
+    .describe h2{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        color: #3B3B3B;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .tags{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .tags li{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 16px;
+        color: #3B3B3B;
+        font-weight: 400;
+        background: #F1F1F1;
+        border-radius:16px;
+        padding:4px 12px;
+        
+    }
+}
+
+/* 頁尾 */
+.footer{
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true");
+}
+.footer-content{
+    max-width: 1296px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px #FAFAFA;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #3B3B3B;
+    gap: 24px;
+}
+.mail{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #919191;
+}
+
+.social{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.footer-social ul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.list{
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+    border: 1px #C1C1C1;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.media{
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+    border: 1px solid #C1C1C1;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #3B3B3B;
+}
+
+@media(max-width: 767px){
+    .footer{
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true");
+    }
+    .footer-content{
+        max-width: 351px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px #FAFAFA;
+        margin: 0 auto;
+        padding: 40px 12px;
+        gap: 40px
+    }
+    .footer-contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #3B3B3B;
+        gap: 4px;
+    }
+    .mail{
+        font-size: 16px;
+        color: #919191;
+    }
+    
+    .social{
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+    .footer-social ul{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .list{
+        display: flex;
+        align-items: center;
+        padding: 4px 24px;
+        gap: 8px;
+        border: 1px #C1C1C1;
+        border-radius: 8px;
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+    .media{
+        display: flex;
+        align-items: center;
+        padding: 4px 24px;
+        gap: 8px;
+        border: 1px solid #C1C1C1;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        color: #3B3B3B;
+    }
+}
